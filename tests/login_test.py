@@ -23,7 +23,7 @@ class TestLogin():
         # Verification:
         # Title verification
         try:
-            expected_title = "The Internet1"
+            expected_title = "The Internet"
             actual_title = driver.title
             assert expected_title == actual_title
             # self.assertEquel(expected_title, actual_title)
@@ -33,7 +33,7 @@ class TestLogin():
             print("Assertion error occurred")
             print(error)
             test_name = utils.whoami()
-            current_time = moment.now().strftime("%d-%m-%Y_%H_%M_%S")
+            current_time = moment.now().strftime("%m-%d-%Y_%H_%M_%S")
             screenshot_name = test_name + "_" + current_time
             allure.attach(self.driver.get_screenshot_as_png(), name=screenshot_name,
                           attachment_type=allure.attachment_type.PNG)
